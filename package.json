@@ -1,0 +1,23 @@
+{
+  "name": "webusb",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoli0605/WebUSB.git"
+  },
+  "author": "LeoLi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leoli0605/WebUSB/issues"
+  },
+  "homepage": "https://github.com/leoli0605/WebUSB#readme",
+  "dependencies": {
+    "express": "^4.18.3",
+    "usb": "^2.12.0"
+  }
+}

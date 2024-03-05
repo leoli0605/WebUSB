@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebUSB Test</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('button').addEventListener('click', function () {
+                navigator.usb.requestDevice({ filters: [] })
+                    .then(selectedDevice => {
+                        var info = `${selectedDevice.manufacturerName} - ${selectedDevice.productName}\r\n` +
+                            `Vendor: 0x${selectedDevice.vendorId.toString(16)} Product Id: 0x${selectedDevice.productId.toString(16)}`;
+                        document.querySelector('#deviceInfo').textContent = info;
+                    })
+                    .catch(error => { console.error(error); });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>Connect to a USB device</button>
+    <pre id="deviceInfo"></pre>
+</body>
+
+</html>
